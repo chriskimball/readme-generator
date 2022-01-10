@@ -1,4 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
+const codeMarkdown = "```"
+
 // If there is no license, return an empty string
 const renderLicenseBadge = (license) => {
   let badgeLink
@@ -66,12 +68,16 @@ const renderContributorsSection = (github) => {
 }
 
 
-const renderDescriptionSection = () => {
+const renderDescriptionSection = (description) => {
+  return `
+## Description
 
+${description}
+`
 }
 
 const renderTableOfContentsSection = () => {
-  return `
+return `
 ## Table of Contents 
 
 * [Installation](#installation)
@@ -84,11 +90,20 @@ const renderTableOfContentsSection = () => {
 
 * [Tests](#tests)
 
-* [Questions](#questions)`
+* [Questions](#questions)
+`
 }
 
-const renderInstallationSection = () => {
+const renderInstallationSection = (install) => {
+  return `
+## Installation
 
+To install any necessary dependencies, run the following command:
+
+${codeMarkdown}
+${install}
+${codeMarkdown} 
+`
 }
 
 const renderUsageSection = () => {
