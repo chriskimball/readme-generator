@@ -1,13 +1,3 @@
-/* // "MIT", https://opensource.org/licenses/MIT
-"Apache 2.0", https://opensource.org/licenses/Apache-2.0
-"GPL 3.0", https://www.gnu.org/licenses/gpl-3.0
-"BSD 3", https://opensource.org/licenses/BSD-3-Clause
-
-
-"None"
-// 
-
-*/ 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 const renderLicenseBadge = (license) => {
@@ -67,12 +57,56 @@ This project is licensed under the ${license} license.`
   }
 }
 
+const renderContributorsSection = () => {
+  
+}
+
+
+const renderDescriptionSection = () => {
+
+}
+
+const renderTableOfContentsSection = () => {
+
+}
+
+const renderInstallationSection = () => {
+
+}
+
+const renderUsageSection = () => {
+
+}
+
+const renderContributingSection = () => {
+
+}
+
+const renderTestsSection = () => {
+
+}
+
+const renderQuestionsSection = () => {
+
+}
+
+
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  console.log(data)
-  return `# ${data.title}
-  ${renderLicenseBadge(data.license)}
-  ${renderLicenseSection(data.license)}
+const generateMarkdown = (data) => {
+
+  const { github, email, title, description, license, install, testing, usage, contributing } = data
+
+  return `# ${title}
+  ${renderLicenseBadge(license)}
+  ${renderContributorsSection(github)}
+  ${renderDescriptionSection(description)}
+  ${renderTableOfContentsSection()}
+  ${renderInstallationSection(install)}
+  ${renderUsageSection(usage)}
+  ${renderLicenseSection(license)}
+  ${renderContributingSection(contributing)}
+  ${renderTestsSection(testing)}
+  ${renderQuestionsSection(github, email)}
 `;
 }
 
