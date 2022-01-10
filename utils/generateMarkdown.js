@@ -114,8 +114,12 @@ ${usage}
 `
 }
 
-const renderContributingSection = () => {
+const renderContributingSection = (contributing) => {
+  return `
+## Contributing
 
+${contributing}
+`
 }
 
 const renderTestsSection = () => {
