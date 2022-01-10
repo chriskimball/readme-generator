@@ -80,9 +80,7 @@ function init() {
     inquirer
         .prompt(questions)
         .then((answers) => {
-            
-            writeToFile(answers)
-            console.log(answers)
+            writeToFile(generateMarkdown(answers));
         })
         .catch((error) => {
             if (error.isTtyError) {
