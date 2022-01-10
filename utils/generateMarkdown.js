@@ -1,9 +1,16 @@
-// "MIT","Apache 2.0","GPL 3.0","BSD 3","None"
+/* // "MIT", https://opensource.org/licenses/MIT
+"Apache 2.0", https://opensource.org/licenses/Apache-2.0
+"GPL 3.0", https://www.gnu.org/licenses/gpl-3.0
+"BSD 3", https://opensource.org/licenses/BSD-3-Clause
 
+
+"None"
+// 
+
+*/ 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  
   let badgeLink
   switch (license) {
     case 'MIT':
@@ -20,10 +27,9 @@ function renderLicenseBadge(license) {
       break;
     case 'None':
       badgeLink = ""
-      break;
   }
   if(badgeLink === "") {
-    return
+    return ``
   } else {
     return `[![License](${badgeLink})](${renderLicenseLink(license)})`
   }
@@ -32,7 +38,16 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  
+  switch (license) {
+    case 'MIT':
+      return `https://opensource.org/licenses/MIT`
+    case 'Apache 2.0':
+      return `https://opensource.org/licenses/Apache-2.0`
+    case 'GPL 3.0':
+      return `https://img.shields.io/badge/license-GPLv3-blue.svg`
+    case 'BSD 3':
+      return `https://img.shields.io/badge/license-BSD_3--Clause-blue.svg`
+  }
 }
 
 // TODO: Create a function that returns the license section of README
