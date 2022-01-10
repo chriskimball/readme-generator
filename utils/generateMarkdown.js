@@ -122,8 +122,16 @@ ${contributing}
 `
 }
 
-const renderTestsSection = () => {
+const renderTestsSection = (testing) => {
+  return`
+## Tests
 
+To run tests run the following command:
+
+${codeMarkdown}
+${testing}
+${codeMarkdown}
+`
 }
 
 const renderQuestionsSection = () => {
