@@ -57,8 +57,12 @@ This project is licensed under the ${license} license.`
   }
 }
 
-const renderContributorsSection = () => {
-  
+const renderContributorsSection = (github) => {
+  return `
+## Contributors
+
+[${github}](https://github.com/${github} "${github}'s GitHub Profile")
+`
 }
 
 
@@ -67,7 +71,7 @@ const renderDescriptionSection = () => {
 }
 
 const renderTableOfContentsSection = () => {
-return `
+  return `
 ## Table of Contents 
 
 * [Installation](#installation)
