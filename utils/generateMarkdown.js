@@ -67,7 +67,20 @@ const renderDescriptionSection = () => {
 }
 
 const renderTableOfContentsSection = () => {
+return `
+## Table of Contents 
 
+* [Installation](#installation)
+
+* [Usage](#usage)
+
+* [License](#license)
+
+* [Contributing](#contributing)
+
+* [Tests](#tests)
+
+* [Questions](#questions)`
 }
 
 const renderInstallationSection = () => {
