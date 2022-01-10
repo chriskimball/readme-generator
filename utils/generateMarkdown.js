@@ -106,8 +106,12 @@ ${codeMarkdown}
 `
 }
 
-const renderUsageSection = () => {
+const renderUsageSection = (usage) => {
+  return `
+## Usage
 
+${usage}
+`
 }
 
 const renderContributingSection = () => {
