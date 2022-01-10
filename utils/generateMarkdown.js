@@ -134,8 +134,12 @@ ${codeMarkdown}
 `
 }
 
-const renderQuestionsSection = () => {
+const renderQuestionsSection = (github , email) => {
+  return`
+## Questions
 
+If you have any questions about the repo, open an issue or contact me directly at [${email}](mailto:${email}). You can find more of my work at [${github}](https://github.com/${github} "${github}'s GitHub Profile").
+`
 }
 
 
@@ -159,18 +163,3 @@ const generateMarkdown = (data) => {
 }
 
 module.exports = generateMarkdown;
-
-
-/*
-
-What is your GitHub username? github
-What is your email address? email
-What is your project's name? title
-Please write a short description of your project. description
-What kind of license should your project have? license
-What command should be run to install dependencies? install
-What command should be run to run tests? testing
-What does the user need to know about using the repo? usage
-What does the user need to know about contributing to the repo? contributing
-
-*/
