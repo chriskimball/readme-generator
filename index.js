@@ -66,13 +66,22 @@ What does the user need to know about contributing to the repo? contributing
 */
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const writeToFile = (data) => {
+    fs.writeFile(
+        "./output/README.md", // file name
+        data, // content to write
+        (err) => 
+        err ? console.error(err) : console.log('Generating Readme...') //call back function
+      );
+}
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer
         .prompt(questions)
         .then((answers) => {
+            
+            writeToFile(answers)
             console.log(answers)
         })
         .catch((error) => {
