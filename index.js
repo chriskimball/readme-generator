@@ -1,22 +1,69 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
         type: "input",
-        message: "Where are you from?",
-        name: "location"
+        message: "What is your GitHub username?",
+        name: "github"
+    },
+    {
+        type: "input",
+        message: "What is your email address?",
+        name: "email"
+    },
+    {
+        type: "input",
+        message: "What is your project's name?",
+        name: "title"
+    },
+    {
+        type: "input",
+        message: "Please write a short description of your project.",
+        name: "description"
     },
     {
         type: "list",
-        message: "What is your name?",
+        message: "What kind of license should your project have?",
         choices: ["MIT","Apache 2.0","GPL 3.0","BSD 3","None"],
-        name: "name"
+        name: "license"
+    },
+    {
+        type: "input",
+        message: "What command should be run to install dependencies?",
+        name: "install"
+    },
+    {
+        type: "input",
+        message: "What command should be run to run tests?",
+        name: "testing"
+    },
+    {
+        type: "input",
+        message: "What does the user need to know about using the repo?",
+        name: "usage"
+    },
+    {
+        type: "input",
+        message: "What does the user need to know about contributing to the repo?",
+        name: "contributing"
     },
 ];
+
+/*
+What is your GitHub username? github
+What is your email address? email
+What is your project's name? title
+Please write a short description of your project. description
+What kind of license should your project have? license
+What command should be run to install dependencies? install
+What command should be run to run tests? testing
+What does the user need to know about using the repo? usage
+What does the user need to know about contributing to the repo? contributing
+*/
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
