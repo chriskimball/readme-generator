@@ -61,6 +61,7 @@ Readme files generated through this application will be generated in the output 
 ---------------
 
 *  [Github Repository](https://github.com/chriskimball/crk-portfolio-19372 "Github Repo")
+*  [Readme Generator Demo](https://watch.screencastify.com/v/UibbqyCSSbbeiCwxrOKp "Video walkthrough")
 
 
 ## Installation
