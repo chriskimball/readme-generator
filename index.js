@@ -5,19 +5,8 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = require('./utils/questions')
 
 
-/*
-What is your GitHub username? github
-What is your email address? email
-What is your project's name? title
-Please write a short description of your project. description
-What kind of license should your project have? license
-What command should be run to install dependencies? install
-What command should be run to run tests? testing
-What does the user need to know about using the repo? usage
-What does the user need to know about contributing to the repo? contributing
-*/
 
-// TODO: Create a function to write README file
+// Function to write README file
 const writeToFile = (data) => {
     fs.writeFile(
         "./output/README.md", // file name
@@ -27,10 +16,12 @@ const writeToFile = (data) => {
       );
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 const init = () => {
     inquirer
+        // Inquirer prompt questions.
         .prompt(questions)
+        // Then generate markdown and write file based off inquirer answers.
         .then((answers) => {
             writeToFile(generateMarkdown(answers));
         })
@@ -39,9 +30,9 @@ const init = () => {
             // Prompt couldn't be rendered in the current environment
             } else {
             // Something else went wrong
-            }
+            };
         });
-}
+};
 
 // Function call to initialize app
 init();
