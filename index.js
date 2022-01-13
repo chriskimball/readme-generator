@@ -28,7 +28,7 @@ const writeToFile = (data) => {
 }
 
 // TODO: Create a function to initialize app
-function init() {
+const init = () => {
     inquirer
         .prompt(questions)
         .then((answers) => {

@@ -50,12 +50,14 @@ const renderLicenseSection = (license) => {
     return `
 ## License
 
-This project is currently unlicensed.`
+This project is currently unlicensed.
+`
   } else {
     return `
 ## License
 
-This project is licensed under the ${license} license.`
+This project is licensed under the ${license} license.
+`
   }
 }
 
@@ -149,16 +151,16 @@ const generateMarkdown = (data) => {
   const { github, email, title, description, license, install, testing, usage, contributing } = data
 
   return `# ${title}
-  ${renderLicenseBadge(license)}
-  ${renderContributorsSection(github)}
-  ${renderDescriptionSection(description)}
-  ${renderTableOfContentsSection()}
-  ${renderInstallationSection(install)}
-  ${renderUsageSection(usage)}
-  ${renderLicenseSection(license)}
-  ${renderContributingSection(contributing)}
-  ${renderTestsSection(testing)}
-  ${renderQuestionsSection(github, email)}
+${renderLicenseBadge(license)}
+${renderContributorsSection(github)}
+${renderDescriptionSection(description)}
+${renderTableOfContentsSection()}
+${renderInstallationSection(install)}
+${renderUsageSection(usage)}
+${renderLicenseSection(license)}
+${renderContributingSection(contributing)}
+${renderTestsSection(testing)}
+${renderQuestionsSection(github, email)}
 `;
 }
 
